@@ -14,6 +14,12 @@ ajustaTamanhoTela()
 
 function posicaoRandomica() {
 
+    //Remover o mosquito anterior na tela, caso exista
+
+    if(document.getElementById('mosquito')) {
+        document.getElementById('mosquito').remove()
+    }
+
     /*Aqui, definimos as posições dos eixos X e Y, definindo a variável
     para ambos. Utilizamos o Math.floor para arredondar o número para
     baixo e o math.random para randomizar um tamanho, multiplicando
@@ -36,6 +42,7 @@ function posicaoRandomica() {
     mosquito.style.left = posicaoX + 'px'
     mosquito.style.top = posicaoY + 'px'
     mosquito.style.position = 'absolute'
+    mosquito.id = 'mosquito'
 
     document.body.appendChild(mosquito)
 
