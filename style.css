@@ -1,7 +1,7 @@
 @charset "UTF-8";
 
 body {
-    background-image: url(../App_Kill_Mosquito/imagens/bg.jpg);
+    background-image: url(./imagens/bg.jpg);
     background-repeat: no-repeat;
     background-size: 100%;
     
