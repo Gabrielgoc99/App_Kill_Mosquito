@@ -1,3 +1,12 @@
+@charset "UTF-8";
+
+body {
+    background-image: url(../App_Kill_Mosquito/imagens/bg.jpg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    
+}
+
 .mosquito1 {
     height: 50px;
     width: 50px;
