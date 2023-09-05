@@ -1,6 +1,23 @@
 var altura = 0
 var largura = 0
 var vidas = 1
+var tempo = 60
+
+var criarMosquitoTempo = 1500
+
+var nivel = window.location.search
+nivel = nivel.replace('?', '')
+
+if(nivel === 'normal') {
+    criarMosquitoTempo = 1500
+
+} else if(nivel === 'hard') {
+    criarMosquitoTempo = 1000
+
+} else if (nivel === 'very_hard') {
+    criarMosquitoTempo = 750
+
+}
 
 function ajustaTamanhoTela() {
 
@@ -13,6 +30,20 @@ function ajustaTamanhoTela() {
 
 ajustaTamanhoTela()
 
+var cronometro = setInterval(function() {
+    tempo -= 1
+
+    if(tempo < 0) {
+        clearInterval(cronometro)
+        clearInterval(criarMosquito)       
+        window.location.href = 'win.html'
+
+    } else {
+    document.getElementById('cronometro').innerHTML = tempo
+    }
+}, 1000)
+
+
 function posicaoRandomica() {
 
     //Remover o mosquito anterior na tela, caso exista
@@ -21,6 +52,7 @@ function posicaoRandomica() {
         document.getElementById('mosquito').remove()
 
         if(vidas > 3) {
+            window.location.href = 'game_over.html'
 
         } else {
 

@@ -1,5 +1,9 @@
 @charset "UTF-8";
 
+html {
+    cursor: url(imagens/mata_mosquito.png) 30 30, auto;
+}
+
 body {
     background-image: url(./imagens/bg.jpg);
     background-repeat: no-repeat;
@@ -49,4 +53,10 @@ body {
     float: left;
     font-size: 20px;
     font-weight: bold;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;  
 }
